@@ -48,9 +48,6 @@ if os.path.exists(ckpt_file):
     config = ckpt['config']
     ee = ckpt['ee']
     counter = int(ckpt['counter'])
-    sum_energy = ckpt['sum_energy']
-    sum_energy_sq = ckpt['sum_energy_sq']
-    sum_config = ckpt['sum_config']
     print(f"Resuming from checkpoint at step {counter} for T={Temp:.4f}")
 else:
     config = np.zeros(N, dtype=int)
@@ -58,9 +55,6 @@ else:
     np.random.shuffle(config)
     ee = energy(config) / 2
     counter = 1
-    sum_energy = 0.0
-    sum_energy_sq = 0.0
-    sum_config = np.zeros(N, dtype=float)
 
 # Parameters
 max_steps = 1_000_000_000
@@ -98,10 +92,7 @@ while counter <= max_steps:
         np.savez(ckpt_file,
                  config=config,
                  ee=ee,
-                 counter=counter,
-                 sum_energy=sum_energy,
-                 sum_energy_sq=sum_energy_sq,
-                 sum_config=sum_config)
+                 counter=counter)
 
     counter += 1
 
