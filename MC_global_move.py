@@ -54,7 +54,7 @@ if os.path.exists(ckpt_file):
     print(f"Resuming from checkpoint at step {counter} for T={Temp:.4f}")
 else:
     config = np.zeros(N, dtype=int)
-    config[:N // 2] = 1
+    config[:N // 3] = 1
     np.random.shuffle(config)
     ee = energy(config) / 2
     counter = 1
