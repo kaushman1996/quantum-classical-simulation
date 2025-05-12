@@ -11,7 +11,7 @@ from tenpy.algorithms.purification import PurificationTEBD, PurificationApplyMPO
 import pickle
 import logging
 logging.basicConfig(level=logging.INFO)
-model_params = dict(cons_N='N',cons_Sz='Sz', t=1.81, U=75.0*1.81,mu=0.0,V= 39.92, lattice="Triangular", bc_MPS='finite',
+model_params = dict(cons_N='N',cons_Sz='Sz', t=1.81, U=75.0*1.81,mu=0.0,V= 39.92,V2=20.44,V3=16.89, lattice="Triangular", bc_MPS='finite',
                         order='default', Lx=6, Ly=6,bc_x='periodic',bc_y='periodic', verbose=0)
 
 M = hubbard.FermiHubbardModel(model_params)
