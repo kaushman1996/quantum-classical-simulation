@@ -12,7 +12,7 @@ This repository contains three Python scripts for simulating quantum and classic
 
 ## 1. `dmrg.py`
 
-Uses the [TeNPy](https://github.com/tenpy/tenpy) library to simulate Model 2
+Uses the [TeNPy](https://github.com/tenpy/tenpy) library to simulate Model 4
 
 **Features:**
 - Computes expectation values of **charge** and **$S_z$**.
