@@ -36,5 +36,6 @@ Simulates a 2D classical double gated potential using global Monte Carlo moves a
 
 ### Features
 
+- Imports interaction_V.npz which contains the double gated potential. 
 - Accepts **temperature** as a command-line argument.
 - Tracks and visualizes the **energy evolution** during the simulation.
