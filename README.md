@@ -25,6 +25,7 @@ Performs **Exact Diagonalization (ED)** for Model 1 using the [QuSpin](https://g
 **Features:**
 - Exploits **translational symmetry** to reduce Hilbert space size and improve performance.
 - Computes the **full energy spectrum**.
+- cv_plot.py plots the specific heat by loading the energy spectrum
 
 
 
